@@ -37,6 +37,7 @@ BOARD_USES_QCOM_HARDWARE := true
 # Kernel - prebuilt stock A14 (boot_b 9.3MB lz4 + vendor_boot dtb)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image.lz4
@@ -110,7 +111,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_SECONDARY_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_MAX_BRIGHTNESS := 2047
+TW_MAX_BRIGHTNESS := 1023
 TW_DEFAULT_BRIGHTNESS := 80
 TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
