@@ -1,7 +1,7 @@
 # OrangeFox product for redfin
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-$(call inherit-product, vendor/fox/config/common.mk)
+$(call inherit-product-if-exists, vendor/fox/config/common.mk)
 $(call inherit-product, device/google/redfin/device.mk)
 
 PRODUCT_DEVICE := redfin
