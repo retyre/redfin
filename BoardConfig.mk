@@ -57,8 +57,9 @@ BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += twrpfastboot=1
 
-# Recovery as boot (no dedicated recovery partition on redfin)
-BOARD_USES_RECOVERY_AS_BOOT := true
+# Recovery into vendor_boot (stock boots recovery from vendor_boot on redfin;
+# avoids the boot-image ramdisk assembly that chokes on the vendor symlink)
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 
 # A/B
 AB_OTA_UPDATER := true
