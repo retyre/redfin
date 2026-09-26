@@ -50,6 +50,7 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
 BOARD_RAMDISK_USE_LZ4 := true
+TARGET_COPY_OUT_VENDOR_RAMDISK := vendor_ramdisk
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1 cgroup.memory=nokmem
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3 swiotlb=2048
