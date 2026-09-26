@@ -1,6 +1,8 @@
 # Device config for redfin
 LOCAL_PATH := device/google/redfin
 
+include $(LOCAL_PATH)/modules.mk
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
